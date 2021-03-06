@@ -2,6 +2,21 @@
 layout: default
 ---
 
+<div class="projects">
+  {% for proj in site.projects %}
+    <article class="project">
+
+      <h1><a href="{{ site.baseurl }}{{ proj.url }}">{{ proj.title }}</a></h1>
+
+      <div class="entry">
+        {{ proj.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ proj.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
+
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
