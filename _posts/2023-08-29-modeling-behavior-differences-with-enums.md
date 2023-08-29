@@ -3,6 +3,13 @@ layout: post
 title: Modeling per-type behavior differences in Rust with enums
 ---
 
+Rust's first-class support for `enum` types lets us use them to model variation
+between behavior on types. By using associated types with trait bounds and
+uninstantiable types, we can reduce code duplication without compromising
+performance.
+
+## Enum types in Rust
+
 Rust has plenty of neat features, but one of the really useful ones is the
 ability to write and exhaustively match on [`enum` types][Rust book enums]. For
 the more theory-inclined, Rust enums are "sum types", which along with `struct`s
