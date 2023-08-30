@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Modeling per-type behavior differences in Rust with enums
+title: Describing behavior differences in Rust with enums
 ---
 
-Rust's first-class support for `enum` types lets us use them to model variation
-between behavior on types. By using associated types with trait bounds and
-uninstantiable types, we can reduce code duplication without compromising
-performance.
+Rust's first-class support for `enum` types lets us use them to describe
+behavior differences for similar types. By using associated types with trait
+bounds, and uninstantiable types, we can reduce code duplication without
+compromising performance.
 
 ## Enum types in Rust
 
@@ -93,7 +93,7 @@ The code above defines two types of food, `Pizza` and `Calzone`, and implements
 the `Food` trait for each by providing an implementation of the one trait
 method, `Food::prepare`.
 
-## Modeling variation with control flow
+## Describing behavior variation
 
 If we look at the code above, we can see that most of the code in the trait
 implementations is duplicated. We could reduce that by extracting common code,
